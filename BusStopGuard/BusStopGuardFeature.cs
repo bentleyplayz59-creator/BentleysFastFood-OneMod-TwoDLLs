@@ -1,7 +1,9 @@
 using System;
+using System.Linq;
 using StardewModdingAPI;
 using StardewModdingAPI.Events;
 using StardewValley;
+using StardewValley.TerrainFeatures;
 
 namespace BentleyPlayz.FastFoodUsefulStuff.BusStopGuard
 {
@@ -37,7 +39,6 @@ namespace BentleyPlayz.FastFoodUsefulStuff.BusStopGuard
         private int AttemptDay = -1;
         private int AttemptsToday;
         private bool WarnedCap;
-        private bool WarnedNoCommand;
 
         public BusStopGuardFeature(IModHelper helper, IMonitor monitor, ModConfig? config)
         {
@@ -219,19 +220,37 @@ namespace BentleyPlayz.FastFoodUsefulStuff.BusStopGuard
                 return;
             }
 
-            string[] args = this.Config.ClearArguments is { Length: > 0 } ? this.Config.ClearArguments : new[] { "current", "everything" };
-            bool found = this.Helper.ConsoleCommands.Trigger("world_clear", args);
+            GameLocation? location = Game1.currentLocation;
+            if (location == null || location.NameOrUniqueName != BusStopName)
+                return;
+
+            this.ClearLocation(location);
             this.ClearedThisVisit = true;
             this.LastClearDay = day;
             this.ForceClear = false;
+        }
 
-            if (found)
-                this.Monitor.Log($"Ran 'world_clear {string.Join(" ", args)}' in the Bus Stop.", LogLevel.Info);
-            else if (!this.WarnedNoCommand)
+        /// <summary>Removes only trees and bushes from the location. Objects, furniture, resource clumps, debris, other terrain features, map tiles and NPCs are not touched.</summary>
+        private void ClearLocation(GameLocation location)
+        {
+            int trees = 0;
+            foreach (var key in location.terrainFeatures.Keys.ToList())
             {
-                this.WarnedNoCommand = true;
-                this.Monitor.Log("The 'world_clear' command is not registered (is Console Commands installed?).", LogLevel.Warn);
+                if (location.terrainFeatures[key] is Tree)
+                {
+                    location.terrainFeatures.Remove(key);
+                    trees++;
+                }
             }
+
+            int bushes = 0;
+            foreach (var bush in location.largeTerrainFeatures.Where(f => f is Bush).ToList())
+            {
+                location.largeTerrainFeatures.Remove(bush);
+                bushes++;
+            }
+
+            this.Monitor.Log($"Removed {trees} tree(s) and {bushes} bush(es) from the Bus Stop.", LogLevel.Info);
         }
     }
 }

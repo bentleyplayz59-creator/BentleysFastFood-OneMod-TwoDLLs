@@ -5,10 +5,7 @@ namespace BentleyPlayz.FastFoodUsefulStuff.BusStopGuard
         /// <summary>Master switch.</summary>
         public bool Enabled { get; set; } = true;
 
-        /// <summary>Arguments passed to the SMAPI console command "world_clear". The command needs an object type, so "current everything" is the form the existing mod's changelog uses.</summary>
-        public string[] ClearArguments { get; set; } = new[] { "current", "everything" };
-
-        /// <summary>Clear at most once per in-game day (a recovery always allows one more clear).</summary>
+        /// <summary>Clear at most once per in-game day (a recovery always allows one more clear). Clearing removes only trees and bushes.</summary>
         public bool ClearOncePerDay { get; set; } = true;
 
         /// <summary>While in the Bus Stop, how often (ticks) the relocation state is re-checked.</summary>
