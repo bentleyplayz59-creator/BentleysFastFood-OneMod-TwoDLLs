@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="2" height="1" tilewidth="16" tileheight="16" infinite="0" nextlayerid="2" nextobjectid="1">
+ <tileset firstgid="1" name="z_BentleyBedroom" tilewidth="16" tileheight="16" tilecount="80" columns="16">
+  <image source="z_BentleyBedroom.png" width="256" height="80"/>
+ </tileset>
+ <layer id="1" name="Buildings" width="2" height="1">
+  <data encoding="csv">
+78,79
+</data>
+ </layer>
+</map>

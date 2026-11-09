@@ -1,0 +1,269 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load Ice Cream Sundae texture",
+      "Action": "Load",
+      "Target": "Mods/{{ModId}}/Dessert_IceCreamSundae",
+      "FromFile": "assets/desserts/sundae.png"
+    },
+    {
+      "LogName": "Load Soft Serve Cone texture",
+      "Action": "Load",
+      "Target": "Mods/{{ModId}}/Dessert_SoftServeCone",
+      "FromFile": "assets/desserts/softserve.png"
+    },
+    {
+      "LogName": "Load Fudge Brownie texture",
+      "Action": "Load",
+      "Target": "Mods/{{ModId}}/Dessert_FudgeBrownie",
+      "FromFile": "assets/desserts/brownie.png"
+    },
+    {
+      "LogName": "Load Strawberry Cheesecake texture",
+      "Action": "Load",
+      "Target": "Mods/{{ModId}}/Dessert_StrawberryCheesecake",
+      "FromFile": "assets/desserts/cheesecake.png"
+    },
+    {
+      "LogName": "Load Glazed Donut texture",
+      "Action": "Load",
+      "Target": "Mods/{{ModId}}/Dessert_GlazedDonut",
+      "FromFile": "assets/desserts/donut.png"
+    },
+    {
+      "LogName": "Load Banana Split texture",
+      "Action": "Load",
+      "Target": "Mods/{{ModId}}/Dessert_BananaSplit",
+      "FromFile": "assets/desserts/bananasplit.png"
+    },
+    {
+      "LogName": "Load Windex Swirl Cone texture",
+      "Action": "Load",
+      "Target": "Mods/{{ModId}}/Dessert_WindexSwirlCone",
+      "FromFile": "assets/desserts/windexswirl.png"
+    },
+    {
+      "LogName": "Dessert items",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_IceCreamSundae": {
+          "Name": "{{ModId}}_IceCreamSundae",
+          "DisplayName": "Ice Cream Sundae",
+          "Description": "Two scoops, chocolate syrup, whipped cream and a cherry on top. Served in the Dessert Corner.",
+          "Type": "Cooking",
+          "Category": -7,
+          "Price": 100,
+          "Texture": "Mods/{{ModId}}/Dessert_IceCreamSundae",
+          "SpriteIndex": 0,
+          "Edibility": 40,
+          "IsDrink": false
+        },
+        "{{ModId}}_SoftServeCone": {
+          "Name": "{{ModId}}_SoftServeCone",
+          "DisplayName": "Soft Serve Cone",
+          "Description": "Creamy vanilla soft serve piled high on a crispy cone.",
+          "Type": "Cooking",
+          "Category": -7,
+          "Price": 70,
+          "Texture": "Mods/{{ModId}}/Dessert_SoftServeCone",
+          "SpriteIndex": 0,
+          "Edibility": 30,
+          "IsDrink": false,
+          "Buffs": [
+            {
+              "Id": "{{ModId}}_SoftServeConeBuff",
+              "Duration": 300,
+              "IsDebuff": false,
+              "CustomAttributes": {
+                "Speed": 1
+              }
+            }
+          ]
+        },
+        "{{ModId}}_FudgeBrownie": {
+          "Name": "{{ModId}}_FudgeBrownie",
+          "DisplayName": "Fudge Brownie",
+          "Description": "A thick, gooey chocolate brownie with walnut bits.",
+          "Type": "Cooking",
+          "Category": -7,
+          "Price": 80,
+          "Texture": "Mods/{{ModId}}/Dessert_FudgeBrownie",
+          "SpriteIndex": 0,
+          "Edibility": 35,
+          "IsDrink": false
+        },
+        "{{ModId}}_StrawberryCheesecake": {
+          "Name": "{{ModId}}_StrawberryCheesecake",
+          "DisplayName": "Strawberry Cheesecake",
+          "Description": "A creamy cheesecake slice on a graham crust, topped with a strawberry.",
+          "Type": "Cooking",
+          "Category": -7,
+          "Price": 110,
+          "Texture": "Mods/{{ModId}}/Dessert_StrawberryCheesecake",
+          "SpriteIndex": 0,
+          "Edibility": 45,
+          "IsDrink": false,
+          "Buffs": [
+            {
+              "Id": "{{ModId}}_StrawberryCheesecakeBuff",
+              "Duration": 300,
+              "IsDebuff": false,
+              "CustomAttributes": {
+                "Defense": 1
+              }
+            }
+          ]
+        },
+        "{{ModId}}_GlazedDonut": {
+          "Name": "{{ModId}}_GlazedDonut",
+          "DisplayName": "Glazed Donut",
+          "Description": "A pink-glazed donut covered in sprinkles.",
+          "Type": "Cooking",
+          "Category": -7,
+          "Price": 60,
+          "Texture": "Mods/{{ModId}}/Dessert_GlazedDonut",
+          "SpriteIndex": 0,
+          "Edibility": 28,
+          "IsDrink": false
+        },
+        "{{ModId}}_BananaSplit": {
+          "Name": "{{ModId}}_BananaSplit",
+          "DisplayName": "Banana Split",
+          "Description": "A banana, three scoops and every topping the kiosk had.",
+          "Type": "Cooking",
+          "Category": -7,
+          "Price": 130,
+          "Texture": "Mods/{{ModId}}/Dessert_BananaSplit",
+          "SpriteIndex": 0,
+          "Edibility": 55,
+          "IsDrink": false,
+          "Buffs": [
+            {
+              "Id": "{{ModId}}_BananaSplitBuff",
+              "Duration": 300,
+              "IsDebuff": false,
+              "CustomAttributes": {
+                "LuckLevel": 1
+              }
+            }
+          ]
+        },
+        "{{ModId}}_WindexSwirlCone": {
+          "Name": "{{ModId}}_WindexSwirlCone",
+          "DisplayName": "Windex Swirl Cone",
+          "Description": "Vanilla soft serve with a suspiciously blue swirl. It smells like window cleaner. It hurts to eat.",
+          "Type": "Cooking",
+          "Category": -7,
+          "Price": 30,
+          "Texture": "Mods/{{ModId}}/Dessert_WindexSwirlCone",
+          "SpriteIndex": 0,
+          "Edibility": 0,
+          "IsDrink": false
+        }
+      }
+    },
+    {
+      "LogName": "Dessert kiosk shop",
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "Entries": {
+        "{{ModId}}_DessertKiosk": {
+          "Items": [
+            {
+              "Id": "{{ModId}}_IceCreamSundae",
+              "ItemId": "(O){{ModId}}_IceCreamSundae",
+              "Price": 200,
+              "IgnoreShopPriceModifiers": true
+            },
+            {
+              "Id": "{{ModId}}_SoftServeCone",
+              "ItemId": "(O){{ModId}}_SoftServeCone",
+              "Price": 140,
+              "IgnoreShopPriceModifiers": true
+            },
+            {
+              "Id": "{{ModId}}_FudgeBrownie",
+              "ItemId": "(O){{ModId}}_FudgeBrownie",
+              "Price": 160,
+              "IgnoreShopPriceModifiers": true
+            },
+            {
+              "Id": "{{ModId}}_StrawberryCheesecake",
+              "ItemId": "(O){{ModId}}_StrawberryCheesecake",
+              "Price": 220,
+              "IgnoreShopPriceModifiers": true
+            },
+            {
+              "Id": "{{ModId}}_GlazedDonut",
+              "ItemId": "(O){{ModId}}_GlazedDonut",
+              "Price": 120,
+              "IgnoreShopPriceModifiers": true
+            },
+            {
+              "Id": "{{ModId}}_BananaSplit",
+              "ItemId": "(O){{ModId}}_BananaSplit",
+              "Price": 260,
+              "IgnoreShopPriceModifiers": true
+            },
+            {
+              "Id": "{{ModId}}_WindexSwirlCone",
+              "ItemId": "(O){{ModId}}_WindexSwirlCone",
+              "Price": 60,
+              "IgnoreShopPriceModifiers": true
+            }
+          ],
+          "Owners": [
+            {
+              "Id": "{{ModId}}_DessertKioskOwner",
+              "Name": "AnyOrNone",
+              "Dialogues": [
+                {
+                  "Id": "{{ModId}}_DessertKioskWelcome",
+                  "Dialogue": "Welcome to the Dessert Corner! Pick something sweet."
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "Dessert Corner (left room of the restaurant, same map): kiosk counter tiles 2-4,4 open the dessert shop (3.13.3: the player stands on the pink floor mat at 2-4,5 and faces up; the Action tiles themselves did not move)",
+      "Action": "EditMap",
+      "Target": "Maps/{{ModId}}_FastFoodInterior",
+      "MapTiles": [
+        {
+          "Position": {
+            "X": 2,
+            "Y": 4
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Action": "OpenShop {{ModId}}_DessertKiosk"
+          }
+        },
+        {
+          "Position": {
+            "X": 3,
+            "Y": 4
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Action": "OpenShop {{ModId}}_DessertKiosk"
+          }
+        },
+        {
+          "Position": {
+            "X": 4,
+            "Y": 4
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Action": "OpenShop {{ModId}}_DessertKiosk"
+          }
+        }
+      ]
+    }
+  ]
+}

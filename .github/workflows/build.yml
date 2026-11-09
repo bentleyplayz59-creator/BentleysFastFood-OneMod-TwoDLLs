@@ -1,0 +1,65 @@
+name: Build Bentley's Fast Food & Useful Stuff (one mod, two DLLs)
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup .NET 6
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 6.0.x
+
+      - name: Add SMAPI / Stardew build environment
+        uses: Pathoschild/SMAPI-ModBuildWorkflow/add-build-environment@v1
+
+      - name: Restore
+        run: |
+          dotnet restore BusStopGuard/BusStopGuard.csproj
+          dotnet restore Patcher/Patcher.csproj
+
+      - name: Build BusStopGuard library (Release)
+        run: dotnet build BusStopGuard/BusStopGuard.csproj --configuration Release --no-restore
+
+      - name: Build patcher tool
+        run: dotnet build Patcher/Patcher.csproj --configuration Release --no-restore
+
+      - name: Inject BusStopGuard call into the original Entry()
+        run: |
+          set -euo pipefail
+          mkdir -p patched
+          GUARD=BusStopGuard/bin/Release/net6.0/BentleyPlayz.FastFoodUsefulStuff.BusStopGuard.dll
+          dotnet Patcher/bin/Release/net6.0/Patcher.dll patch lib/BentleyPlayz.FastFoodUsefulStuff.Smapi.dll "$GUARD" patched/BentleyPlayz.FastFoodUsefulStuff.Smapi.dll
+          dotnet Patcher/bin/Release/net6.0/Patcher.dll verify patched/BentleyPlayz.FastFoodUsefulStuff.Smapi.dll "$GUARD" lib/BentleyPlayz.FastFoodUsefulStuff.Smapi.dll
+
+      - name: Assemble the single mod folder and verify it
+        run: |
+          set -euo pipefail
+          MOD="dist/BentleyPlayz FastFoodUsefulStuff"
+          CODE="$MOD/Code"
+          mkdir -p dist
+          cp -r "ModPackage/BentleyPlayz FastFoodUsefulStuff" dist/
+          cp patched/BentleyPlayz.FastFoodUsefulStuff.Smapi.dll "$CODE/"
+          cp BusStopGuard/bin/Release/net6.0/BentleyPlayz.FastFoodUsefulStuff.BusStopGuard.dll "$CODE/"
+          echo "--- DLLs in package:"; find dist -name '*.dll' | sort
+          test "$(find dist -name '*.dll' | wc -l)" = "2"
+          echo "--- manifests in package:"; find dist -name manifest.json | sort
+          test "$(find dist -name manifest.json | wc -l)" = "2"        # Code + Content, exactly as in the original mod
+          cmp "ModPackage/BentleyPlayz FastFoodUsefulStuff/Code/manifest.json" "$CODE/manifest.json"
+          grep -q '"UniqueID": "BentleyPlayz.FastFoodUsefulStuff.Smapi"' "$CODE/manifest.json"
+          grep -q '"EntryDll": "BentleyPlayz.FastFoodUsefulStuff.Smapi.dll"' "$CODE/manifest.json"
+          ! cmp -s lib/BentleyPlayz.FastFoodUsefulStuff.Smapi.dll "$CODE/BentleyPlayz.FastFoodUsefulStuff.Smapi.dll"
+
+      - name: Upload finished mod (extract into Mods/)
+        uses: actions/upload-artifact@v4
+        with:
+          name: BentleysFastFood-FullMod-with-BusStopGuard
+          path: dist
+          if-no-files-found: error

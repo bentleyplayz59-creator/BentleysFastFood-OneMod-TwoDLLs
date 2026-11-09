@@ -1,0 +1,253 @@
+{
+  "Changes": [
+    {
+      "LogName": "[Forest] Clear bush/weed/twig spawn markers 5 tiles around the restaurant",
+      "Action": "EditMap",
+      "Target": "Maps/Forest",
+      "FromFile": "assets/maps/ForestClearing.tmx",
+      "ToArea": {
+        "X": 60,
+        "Y": 15,
+        "Width": 18,
+        "Height": 17
+      },
+      "PatchMode": "ReplaceByLayer"
+    },
+    {
+      "LogName": "[Ice Festival] Clear bush/weed/twig spawn markers 5 tiles around the restaurant",
+      "Action": "EditMap",
+      "Target": "Maps/Forest-IceFestival",
+      "FromFile": "assets/maps/ForestClearing.tmx",
+      "ToArea": {
+        "X": 60,
+        "Y": 15,
+        "Width": 18,
+        "Height": 17
+      },
+      "PatchMode": "ReplaceByLayer"
+    },
+    {
+      "LogName": "[Ice Festival 2] Clear bush/weed/twig spawn markers 5 tiles around the restaurant",
+      "Action": "EditMap",
+      "Target": "Maps/Forest-IceFestival2",
+      "FromFile": "assets/maps/ForestClearing.tmx",
+      "ToArea": {
+        "X": 60,
+        "Y": 15,
+        "Width": 18,
+        "Height": 17
+      },
+      "PatchMode": "ReplaceByLayer"
+    },
+    {
+      "LogName": "[Forest] Load restaurant building tiles",
+      "Action": "EditMap",
+      "Target": "Maps/Forest",
+      "FromFile": "assets/maps/ForestRestaurant.tmx",
+      "ToArea": {
+        "X": 65,
+        "Y": 20,
+        "Width": 8,
+        "Height": 7
+      },
+      "PatchMode": "ReplaceByLayer"
+    },
+    {
+      "LogName": "[Forest] Door step art on the Back layer (walkable, never covers the player's head)",
+      "Action": "EditMap",
+      "Target": "Maps/Forest",
+      "FromFile": "assets/maps/ForestDoorStep.tmx",
+      "ToArea": {
+        "X": 68,
+        "Y": 26,
+        "Width": 2,
+        "Height": 1
+      },
+      "PatchMode": "Overlay"
+    },
+    {
+      "LogName": "[Forest] Poster action (hours sign)",
+      "Action": "EditMap",
+      "Target": "Maps/Forest",
+      "MapTiles": [
+        {
+          "Position": {
+            "X": 70,
+            "Y": 25
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Action": "Dialogue Bentley's Fast Food is open 24 hours a day, every day."
+          }
+        }
+      ]
+    },
+    {
+      "LogName": "[Ice Festival] Load restaurant building tiles",
+      "Action": "EditMap",
+      "Target": "Maps/Forest-IceFestival",
+      "FromFile": "assets/maps/ForestRestaurant.tmx",
+      "ToArea": {
+        "X": 65,
+        "Y": 20,
+        "Width": 8,
+        "Height": 7
+      },
+      "PatchMode": "ReplaceByLayer"
+    },
+    {
+      "LogName": "[Ice Festival] Door step art on the Back layer (walkable, never covers the player's head)",
+      "Action": "EditMap",
+      "Target": "Maps/Forest-IceFestival",
+      "FromFile": "assets/maps/ForestDoorStep.tmx",
+      "ToArea": {
+        "X": 68,
+        "Y": 26,
+        "Width": 2,
+        "Height": 1
+      },
+      "PatchMode": "Overlay"
+    },
+    {
+      "LogName": "[Ice Festival] Poster action (hours sign)",
+      "Action": "EditMap",
+      "Target": "Maps/Forest-IceFestival",
+      "MapTiles": [
+        {
+          "Position": {
+            "X": 70,
+            "Y": 25
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Action": "Dialogue Bentley's Fast Food is open 24 hours a day, every day."
+          }
+        }
+      ]
+    },
+    {
+      "LogName": "[Ice Festival 2] Load restaurant building tiles",
+      "Action": "EditMap",
+      "Target": "Maps/Forest-IceFestival2",
+      "FromFile": "assets/maps/ForestRestaurant.tmx",
+      "ToArea": {
+        "X": 65,
+        "Y": 20,
+        "Width": 8,
+        "Height": 7
+      },
+      "PatchMode": "ReplaceByLayer"
+    },
+    {
+      "LogName": "[Ice Festival 2] Door step art on the Back layer (walkable, never covers the player's head)",
+      "Action": "EditMap",
+      "Target": "Maps/Forest-IceFestival2",
+      "FromFile": "assets/maps/ForestDoorStep.tmx",
+      "ToArea": {
+        "X": 68,
+        "Y": 26,
+        "Width": 2,
+        "Height": 1
+      },
+      "PatchMode": "Overlay"
+    },
+    {
+      "LogName": "[Ice Festival 2] Poster action (hours sign)",
+      "Action": "EditMap",
+      "Target": "Maps/Forest-IceFestival2",
+      "MapTiles": [
+        {
+          "Position": {
+            "X": 70,
+            "Y": 25
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Action": "Dialogue Bentley's Fast Food is open 24 hours a day, every day."
+          }
+        }
+      ]
+    },
+    {
+      "LogName": "[Forest] Front door: tap / action button / click on the door enters (vanilla Action Warp, open 24/7)",
+      "Action": "EditMap",
+      "Target": "Maps/Forest",
+      "MapTiles": [
+        {
+          "Position": {
+            "X": 68,
+            "Y": 25
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Action": "Warp 15 12 {{ModId}}_BentleysRestaurant"
+          }
+        },
+        {
+          "Position": {
+            "X": 69,
+            "Y": 25
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Action": "Warp 15 12 {{ModId}}_BentleysRestaurant"
+          }
+        }
+      ]
+    },
+    {
+      "LogName": "[Ice Festival] Front door: tap / action button / click on the door enters (vanilla Action Warp, open 24/7)",
+      "Action": "EditMap",
+      "Target": "Maps/Forest-IceFestival",
+      "MapTiles": [
+        {
+          "Position": {
+            "X": 68,
+            "Y": 25
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Action": "Warp 15 12 {{ModId}}_BentleysRestaurant"
+          }
+        },
+        {
+          "Position": {
+            "X": 69,
+            "Y": 25
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Action": "Warp 15 12 {{ModId}}_BentleysRestaurant"
+          }
+        }
+      ]
+    },
+    {
+      "LogName": "[Ice Festival 2] Front door: tap / action button / click on the door enters (vanilla Action Warp, open 24/7)",
+      "Action": "EditMap",
+      "Target": "Maps/Forest-IceFestival2",
+      "MapTiles": [
+        {
+          "Position": {
+            "X": 68,
+            "Y": 25
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Action": "Warp 15 12 {{ModId}}_BentleysRestaurant"
+          }
+        },
+        {
+          "Position": {
+            "X": 69,
+            "Y": 25
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Action": "Warp 15 12 {{ModId}}_BentleysRestaurant"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "Name": "Bentley's Fast Food",
+  "Author": "Bentley Playz",
+  "Version": "3.13.6",
+  "Description": "Adds Cheeseburger, French Fries, Coke, Windex, the Farmhand Snack Pack and Chicken Nuggets, Bentley's Fast Food restaurant in Cindersap Forest (walk-in interior, ordering counter shop) and Bentley the restaurant-owner NPC. One mod: this Content part and the Code part (door locking, Windex damage, update announcement) live in the same folder.",
+  "UniqueID": "BentleyPlayz.FastFoodUsefulStuff",
+  "ContentPackFor": {
+    "UniqueID": "Pathoschild.ContentPatcher",
+    "MinimumVersion": "2.6.0"
+  },
+  "Dependencies": [
+    {
+      "UniqueID": "BentleyPlayz.FastFoodUsefulStuff.Smapi",
+      "IsRequired": true
+    }
+  ]
+}

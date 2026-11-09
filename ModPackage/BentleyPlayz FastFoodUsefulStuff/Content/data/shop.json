@@ -1,0 +1,148 @@
+{
+  "Changes": [
+    {
+      "LogName": "Add Bentley's Fast Food shop (separate from Gus's)",
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "Entries": {
+        "{{ModId}}_BentleyShop": {
+          "Items": [
+            {
+              "Id": "{{ModId}}_Cheeseburger",
+              "ItemId": "(O){{ModId}}_Cheeseburger",
+              "Price": 180,
+              "IgnoreShopPriceModifiers": true
+            },
+            {
+              "Id": "{{ModId}}_FrenchFries",
+              "ItemId": "(O){{ModId}}_FrenchFries",
+              "Price": 90,
+              "IgnoreShopPriceModifiers": true
+            },
+            {
+              "Id": "{{ModId}}_ChickenNuggets",
+              "ItemId": "(O){{ModId}}_ChickenNuggets",
+              "Price": 140,
+              "IgnoreShopPriceModifiers": true
+            },
+            {
+              "Id": "{{ModId}}_Coke",
+              "ItemId": "(O){{ModId}}_Coke",
+              "Price": 100,
+              "IgnoreShopPriceModifiers": true
+            },
+            {
+              "Id": "{{ModId}}_Milkshake",
+              "ItemId": "(O){{ModId}}_Milkshake",
+              "Price": 180,
+              "IgnoreShopPriceModifiers": true
+            },
+            {
+              "Id": "{{ModId}}_Windex",
+              "ItemId": "(O){{ModId}}_Windex",
+              "Price": 25,
+              "IgnoreShopPriceModifiers": true
+            },
+            {
+              "Id": "{{ModId}}_FarmhandSnackPack",
+              "ItemId": "(O){{ModId}}_FarmhandSnackPack",
+              "Price": 220,
+              "IgnoreShopPriceModifiers": true
+            }
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "Shop owner: Bentley (6 AM-6 PM, Bentley portrait) or the Restaurant Robot (robot portrait) when Bentley is away; counter always open",
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "Fields": {
+        "{{ModId}}_BentleyShop": {
+          "Owners": [
+            {
+              "Id": "{{ModId}}_BentleyAtCounter",
+              "Condition": "TIME 600 1800",
+              "Name": "AnyOrNone",
+              "Portrait": "Portraits/{{ModId}}_Bentley",
+              "Dialogues": [
+                {
+                  "Id": "{{ModId}}_WelcomeBentley",
+                  "Dialogue": "Welcome to Bentley's! What can I get you?"
+                }
+              ]
+            },
+            {
+              "Id": "{{ModId}}_RobotAtCounter",
+              "Name": "AnyOrNone",
+              "Portrait": "Portraits/{{ModId}}_RestaurantRobot",
+              "Dialogues": [
+                {
+                  "Id": "{{ModId}}_WelcomeRobot",
+                  "Dialogue": "Greetings, customer. I am the Restaurant Robot. Please place your order."
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "Make the ordering counter open Bentley's shop",
+      "Action": "EditMap",
+      "Target": "Maps/{{ModId}}_FastFoodInterior",
+      "MapTiles": [
+        {
+          "Position": {
+            "X": 14,
+            "Y": 5
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Action": "OpenShop {{ModId}}_BentleyShop"
+          }
+        },
+        {
+          "Position": {
+            "X": 15,
+            "Y": 5
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Action": "OpenShop {{ModId}}_BentleyShop"
+          }
+        },
+        {
+          "Position": {
+            "X": 16,
+            "Y": 5
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Action": "OpenShop {{ModId}}_BentleyShop"
+          }
+        },
+        {
+          "Position": {
+            "X": 17,
+            "Y": 5
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Action": "OpenShop {{ModId}}_BentleyShop"
+          }
+        },
+        {
+          "Position": {
+            "X": 18,
+            "Y": 5
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Action": "OpenShop {{ModId}}_BentleyShop"
+          }
+        }
+      ]
+    }
+  ]
+}

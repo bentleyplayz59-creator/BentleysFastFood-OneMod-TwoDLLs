@@ -1,0 +1,82 @@
+{
+ "Changes": [
+  {
+   "LogName": "[BusStop] Load restaurant building tiles on the lawn (tiles 30-37 x 10-16)",
+   "Action": "EditMap",
+   "Target": "Maps/BusStop",
+   "FromFile": "assets/maps/ForestRestaurant.tmx",
+   "ToArea": {
+    "X": 30,
+    "Y": 10,
+    "Width": 8,
+    "Height": 7
+   },
+   "PatchMode": "ReplaceByLayer"
+  },
+  {
+   "LogName": "[BusStop] Door step art",
+   "Action": "EditMap",
+   "Target": "Maps/BusStop",
+   "FromFile": "assets/maps/ForestDoorStep.tmx",
+   "ToArea": {
+    "X": 33,
+    "Y": 16,
+    "Width": 2,
+    "Height": 1
+   },
+   "PatchMode": "Overlay"
+  },
+  {
+   "LogName": "[BusStop] Poster action (hours sign)",
+   "Action": "EditMap",
+   "Target": "Maps/BusStop",
+   "MapTiles": [
+    {
+     "Position": {
+      "X": 37,
+      "Y": 15
+     },
+     "Layer": "Buildings",
+     "SetProperties": {
+      "Action": "Dialogue Bentley's Fast Food is open 24 hours a day, every day."
+     }
+    }
+   ]
+  },
+  {
+   "LogName": "[BusStop] Front door warps",
+   "Action": "EditMap",
+   "Target": "Maps/BusStop",
+   "MapTiles": [
+    {
+     "Position": {
+      "X": 33,
+      "Y": 15
+     },
+     "Layer": "Buildings",
+     "SetProperties": {
+      "Action": "Warp 15 12 {{ModId}}_BentleysRestaurant"
+     }
+    },
+    {
+     "Position": {
+      "X": 34,
+      "Y": 15
+     },
+     "Layer": "Buildings",
+     "SetProperties": {
+      "Action": "Warp 15 12 {{ModId}}_BentleysRestaurant"
+     }
+    }
+   ]
+  },
+  {
+   "LogName": "Restaurant exit leads to the Bus Stop, just below the door",
+   "Action": "EditMap",
+   "Target": "Maps/{{ModId}}_FastFoodInterior",
+   "MapProperties": {
+    "Warp": "15 13 BusStop 33 17 16 13 BusStop 34 17"
+   }
+  }
+ ]
+}

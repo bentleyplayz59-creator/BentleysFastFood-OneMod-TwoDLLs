@@ -1,0 +1,180 @@
+{
+  "Changes": [
+    {
+      "LogName": "Festival entries: Egg Festival",
+      "Action": "EditData",
+      "Target": "Data/Festivals/spring13",
+      "Entries": {
+        "{{ModId}}_Bentley": "Pssh, I'm not handing out eggs. I'm just standing near the fries I brought. Totally normal.$5"
+      },
+      "When": {
+        "EnableFestivals": "true"
+      },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "/{{ModId}}_Bentley 14 20 2",
+          "Delimiter": ""
+        }
+      ]
+    },
+    {
+      "LogName": "Festival entries: Flower Dance",
+      "Action": "EditData",
+      "Target": "Data/Festivals/spring24",
+      "Entries": {
+        "{{ModId}}_Bentley": "I'm not dancing. I'm guarding the snack table. Someone has to.$1"
+      },
+      "When": {
+        "EnableFestivals": "true"
+      },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "/{{ModId}}_Bentley 10 12 2",
+          "Delimiter": ""
+        }
+      ]
+    },
+    {
+      "LogName": "Festival entries: Luau",
+      "Action": "EditData",
+      "Target": "Data/Festivals/summer11",
+      "Entries": {
+        "{{ModId}}_Bentley": "The soup tastes great, but I'm fighting the urge to add cheese to it.$5"
+      },
+      "When": {
+        "EnableFestivals": "true"
+      },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "/{{ModId}}_Bentley 10 24 2",
+          "Delimiter": ""
+        }
+      ]
+    },
+    {
+      "LogName": "Festival entries: Dance of the Moonlight Jellies",
+      "Action": "EditData",
+      "Target": "Data/Festivals/summer28",
+      "Entries": {
+        "{{ModId}}_Bentley": "It's pretty out here. I usually only see this much glow from the fryer.$1"
+      },
+      "When": {
+        "EnableFestivals": "true"
+      },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "/{{ModId}}_Bentley 10 10 2",
+          "Delimiter": ""
+        }
+      ]
+    },
+    {
+      "LogName": "Festival entries: Stardew Valley Fair",
+      "Action": "EditData",
+      "Target": "Data/Festivals/fall16",
+      "Entries": {
+        "{{ModId}}_Bentley": "The Fair is wild. I'm taking notes for my menu. Not for the games, sadly.$5"
+      },
+      "When": {
+        "EnableFestivals": "true"
+      },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "/{{ModId}}_Bentley 30 50 2",
+          "Delimiter": ""
+        }
+      ]
+    },
+    {
+      "LogName": "Festival entries: Spirit's Eve",
+      "Action": "EditData",
+      "Target": "Data/Festivals/fall27",
+      "Entries": {
+        "{{ModId}}_Bentley": "A spooky festival with no pickles to be found. Rude.$3"
+      },
+      "When": {
+        "EnableFestivals": "true"
+      },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "/{{ModId}}_Bentley 10 20 2",
+          "Delimiter": ""
+        }
+      ]
+    },
+    {
+      "LogName": "Festival entries: Festival of Ice",
+      "Action": "EditData",
+      "Target": "Data/Festivals/winter8",
+      "Entries": {
+        "{{ModId}}_Bentley": "It's freezing out here. If there were a fry cart, I'd already be on it.$2"
+      },
+      "When": {
+        "EnableFestivals": "true"
+      },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "/{{ModId}}_Bentley 20 60 2",
+          "Delimiter": ""
+        }
+      ]
+    },
+    {
+      "LogName": "Festival entries: Feast of the Winter Star",
+      "Action": "EditData",
+      "Target": "Data/Festivals/winter25",
+      "Entries": {
+        "{{ModId}}_Bentley": "Happy Winter Star, @. Next year I'm doing a holiday menu. You'll see."
+      },
+      "When": {
+        "EnableFestivals": "true"
+      },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+          ],
+          "Value": "/{{ModId}}_Bentley 20 10 2",
+          "Delimiter": ""
+        }
+      ]
+    }
+  ]
+}

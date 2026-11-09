@@ -1,0 +1,233 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load Bentley portraits",
+      "Action": "Load",
+      "Target": "Portraits/{{ModId}}_Bentley",
+      "FromFile": "assets/npc/Bentley_portraits.png"
+    },
+    {
+      "LogName": "Load Bentley sprites",
+      "Action": "Load",
+      "Target": "Characters/{{ModId}}_Bentley",
+      "FromFile": "assets/npc/Bentley_sprites.png"
+    },
+    {
+      "LogName": "Load Bentley hazmat suit portraits",
+      "Action": "Load",
+      "Target": "Portraits/{{ModId}}_Bentley_Hazmat",
+      "FromFile": "assets/npc/Bentley_hazmat_portraits.png"
+    },
+    {
+      "LogName": "Load Bentley hazmat suit sprites",
+      "Action": "Load",
+      "Target": "Characters/{{ModId}}_Bentley_Hazmat",
+      "FromFile": "assets/npc/Bentley_hazmat_sprites.png"
+    },
+    {
+      "LogName": "Load Bentley winter portraits",
+      "Action": "Load",
+      "Target": "Portraits/{{ModId}}_Bentley_Winter",
+      "FromFile": "assets/npc/Bentley_winter_portraits.png"
+    },
+    {
+      "LogName": "Load Bentley winter sprites",
+      "Action": "Load",
+      "Target": "Characters/{{ModId}}_Bentley_Winter",
+      "FromFile": "assets/npc/Bentley_winter_sprites.png"
+    },
+    {
+      "LogName": "Bentley character data",
+      "Action": "EditData",
+      "Target": "Data/Characters",
+      "Entries": {
+        "{{ModId}}_Bentley": {
+          "DisplayName": "Bentley",
+          "BirthSeason": "Spring",
+          "BirthDay": 11,
+          "HomeRegion": "Town",
+          "Gender": "Male",
+          "Age": "Adult",
+          "Manner": "Neutral",
+          "SocialAnxiety": "Outgoing",
+          "Optimism": "Positive",
+          "CanBeRomanced": false,
+          "CanSocialize": "TRUE",
+          "CanReceiveGifts": true,
+          "CanGreetNearbyCharacters": true,
+          "FlowerDanceCanDance": false,
+          "SpawnIfMissing": true,
+          "Calendar": "AlwaysShown",
+          "SocialTab": "UnknownUntilMet",
+          "Home": [
+            {
+              "Id": "Default",
+              "Location": "{{ModId}}_BentleysBedroom",
+              "Tile": {
+                "X": 9,
+                "Y": 6
+              },
+              "Direction": "right"
+            }
+          ],
+          "TextureName": "{{ModId}}_Bentley",
+          "Size": {
+            "X": 16,
+            "Y": 32
+          },
+          "Appearance": [
+            {
+              "Id": "{{ModId}}_Hazmat",
+              "Condition": "WEATHER Here GreenRain",
+              "Portrait": "Portraits/{{ModId}}_Bentley_Hazmat",
+              "Sprite": "Characters/{{ModId}}_Bentley_Hazmat",
+              "Precedence": 0
+            },
+            {
+              "Id": "{{ModId}}_Winter",
+              "Season": "Winter",
+              "Portrait": "Portraits/{{ModId}}_Bentley_Winter",
+              "Sprite": "Characters/{{ModId}}_Bentley_Winter",
+              "Precedence": 2
+            }
+          ],
+          "CustomFields": {
+            "BentleyPlayz.Role": "RestaurantOwner"
+          }
+        }
+      }
+    },
+    {
+      "LogName": "Bentley schedule",
+      "Action": "Load",
+      "Target": "Characters/schedules/{{ModId}}_Bentley",
+      "FromFile": "assets/data/empty.json"
+    },
+    {
+      "LogName": "Bentley schedule entries",
+      "Action": "EditData",
+      "Target": "Characters/schedules/{{ModId}}_Bentley",
+      "Entries": {
+        "spring": "0610 {{ModId}}_BentleysRestaurant 16 4 2/1800 Saloon 21 17 2 {{ModId}}_Bentley_Smoke/2330 {{ModId}}_BentleysBedroom 9 6 1",
+        "default": "0610 {{ModId}}_BentleysRestaurant 16 4 2/1800 Saloon 21 17 2 {{ModId}}_Bentley_Smoke/2330 {{ModId}}_BentleysBedroom 9 6 1",
+        "rain": "0610 {{ModId}}_BentleysRestaurant 16 4 2/1800 Saloon 21 17 2 {{ModId}}_Bentley_Smoke/2330 {{ModId}}_BentleysBedroom 9 6 1"
+      }
+    },
+    {
+      "LogName": "Bentley smoking animation (frames 16-23 of the normal and winter sheets)",
+      "Action": "EditData",
+      "Target": "Data/animationDescriptions",
+      "Entries": {
+        "{{ModId}}_Bentley_Smoke": "16 16 16 16 16 16 17 17 17 17 17 17 18 18 18 19 19/20 20 20 19 19 19 21 22 22 20 20/20"
+      }
+    },
+    {
+      "LogName": "Bentley dialogue (base)",
+      "Action": "Load",
+      "Target": "Characters/Dialogue/{{ModId}}_Bentley",
+      "FromFile": "assets/data/empty.json"
+    },
+    {
+      "LogName": "Bentley first-time introduction dialogue (new-player welcome)",
+      "When": { "NewPlayerWelcome": "true" },
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/{{ModId}}_Bentley",
+      "Entries": {
+        "Introduction": "Oh hey, you must be the new farmer. I'm Bentley. I run Bentley's Fast Food, so if you ever get hungry, you know where to find me.$1#$b#Fair warning: I don't do refunds on pickles.$5"
+      }
+    },
+    {
+      "LogName": "Bentley dialogue (entries)",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/{{ModId}}_Bentley",
+      "Entries": {
+        "Mon": "Hey, what's up?",
+        "Tue": "Another day, another mountain of burgers. At least the fries haven't started talking back.$5",
+        "Wed": "People think running a restaurant is easy. Try keeping everything stocked while someone asks for twelve extra pickles.$3",
+        "Thu": "Hey, I love to drink Windex.$5#$b#...That's a joke. Obviously. Please never actually drink Windex.$3",
+        "Fri": "Friday rush. Everybody wants fries at the same time, like they planned it.$2",
+        "Sat": "Weekends are my busiest days. If I look like I'm sprinting, I probably am.$0",
+        "Sun": "Sundays are slow until about noon, then it's chaos. Order something before the line shows up!$1",
+        "Mon2": "Hey, @! You're becoming a regular around here.$1",
+        "Tue2": "Back again? Good. I like seeing a familiar face over the counter.$1",
+        "Wed2": "Fries are fresh right now, if you're asking. Which you weren't. But now you know.$5",
+        "Thu2": "The secret to a good burger is not overthinking it. Okay, and a lot of cheese.$0",
+        "Fri2": "Some folks order the same thing every time. I respect that. It's easy on my memory.$1",
+        "Sat2": "Careful, @. If you keep this up I'm going to start learning your order by heart.$5",
+        "Sun2": "Slow morning today. Nothing but me, the grill, and the sound of a very patient pickle jar.$0",
+        "Mon4": "I work here every day, and I never even get a thank-you.$2#$b#...Okay, that's not fair. You say thank you, @. Thanks for that.$1",
+        "Tue4": "You know what's funny? I used to dream about owning a restaurant. Nobody tells you the dream includes a lot of mopping.$5",
+        "Wed4": "I came up with the Farmhand Snack Pack because folks kept leaving the farm hungry. Turns out hungry farmers are good for business.$1",
+        "Thu4": "Do you ever get tired of the same routine? I love this place, but some days I wouldn't mind a nap in a sunbeam.$2",
+        "Fri4": "Sometimes I wonder if anyone realizes how much work goes into keeping this place running.$2#$b#Not you, though. You get it. That's nice.$1",
+        "Sat4": "Weekend crowd was rough today. Someone asked if the Coke was 'the regular kind.' It's cola. It's always the regular kind.$3",
+        "Sun4": "Closing up every night takes forever. But there's a quiet moment after the last customer leaves that I kind of like.$0",
+        "Mon6": "I started this place because I wanted people to leave the counter happier than they arrived. Most days, it actually works.$1",
+        "Tue6": "Honestly, @, having someone around who appreciates the work makes the long shifts a lot easier.$1",
+        "Wed6": "My feet hurt, my apron smells like onions, and I wouldn't trade it. Don't tell anyone I said that.$5",
+        "Thu6": "I tried a new fries recipe last night. It was a disaster. We don't talk about it.$3#$b#The pickles survived though. Nothing kills those.$5",
+        "Fri6": "You ever have a day where you do everything right and still the grill acts up? Yeah. That was today.$2",
+        "Sat6": "Some customers leave the nicest notes. Most leave napkins. I keep both.$1",
+        "Sun6": "I like it here in the valley. It's quieter than I expected, and people actually come back. That means a lot.$0",
+        "Mon8": "I don't say this much, but you've made this job feel worth it, @. Thank you.$1",
+        "Tue8": "Some nights I lock up and think, 'what am I even doing?' Then I think of the regulars, and I figure it out.$2#$b#You're at the top of that list, by the way.$1",
+        "Wed8": "If I ever got to retire, I'd probably still hang around the grill. Old habits. Good habits, though.$5",
+        "Thu8": "Running this place alone gets heavy sometimes. Having a friend who stops by makes it lighter. I mean that.$0",
+        "Fri8": "I don't need a big crowd or a fancy review. I just need a few good friends and a grill that behaves. So I'm doing okay.$1",
+        "Sat8": "You're about the only person who makes a Saturday rush feel fun. How do you do that?$5",
+        "Sun8": "You know, I never told anyone this, but I practice my 'welcome to Bentley's' voice in the mirror. Every morning.$5#$b#Don't laugh. Okay, laugh a little.$1",
+        "spring_Tue": "Spring means fresh veggies, and fresh veggies mean better burgers. Even I get excited about lettuce.$1",
+        "spring_Sat4": "The Egg Festival is coming up eventually, and I always try to bring a snack. Eggs, obviously, would be too on the nose.$5",
+        "summer_Thu": "It's hot enough to fry an egg on the pavement. Which, honestly, would save me some stove time.$5",
+        "summer_Fri4": "Summer means cold drinks. I can barely keep the Coke stocked. It's a good problem to have.$1",
+        "fall_Wed": "Fall is my favorite. Cooler days, hungrier customers, and nobody asks for ice.$1",
+        "fall_Sat4": "Pumpkin everything this time of year. I'm resisting a pumpkin burger. For now.$3",
+        "winter_Mon": "Nothing beats a hot basket of fries on a snowy day. That's not marketing. That's science.$1",
+        "winter_Sat4": "Winter is slow. It gives me time to experiment with new menu ideas. Most of them are terrible, but a few aren't.$0",
+        "Rainy_Day_0": "Rainy days mean everybody wants hot food. Drizzle is basically a customer magnet.$1",
+        "Rainy_Day_1": "Rain on the roof, fries in the fryer. Honestly, not bad.$0",
+        "Rainy_Night_0": "Wet shoes tracking mud across my floor. Love it. Truly. No, I don't.$3",
+        "Indoor_Day_0": "Hey, @. Need a snack, or are you just here for the air conditioning?$5",
+        "Indoor_Day_1": "The grill's hot, the fries are crisp, and nobody has asked me for ten extra pickles yet. Good day so far.$1",
+        "Indoor_Night_0": "Almost closing time. Last order's coming up, so make it a good one!$0",
+        "Indoor_Night_1": "Wiping the counter again. Somehow it's always sticky. I don't know how.$2",
+        "Outdoor_Day_0": "Even when I'm off the clock, I smell like fries. It's a lifestyle.$5",
+        "Outdoor_Day_1": "A walk is good for the soul. Sometimes it's good for finding new menu ideas.$1",
+        "Outdoor_Night_0": "Quiet night. Just me, the stars, and a wrinkled apron.$0",
+        "spring_11": "Oh, you remembered my birthday? You didn't have to... but I won't stop you if you brought me something fried.$1#$b#Seriously though, thanks for stopping by, @.$1",
+        "AcceptGift_(O){{ModId}}_Cheeseburger": "You brought me a cheeseburger? Technically that's my job. But I'll admit, it's different when someone else makes it.$1",
+        "AcceptGift_(O){{ModId}}_FrenchFries": "Fries! I'm surrounded by these all day and still can't say no. Thanks, @.$1",
+        "AcceptGift_(O){{ModId}}_Coke": "A cold Coke. You really do know how to cheer up a tired restaurant owner.$1",
+        "AcceptGift_(O){{ModId}}_Windex": "...Is this Windex? @, this is a cleaning product, not a drink. I'll use it on the front windows.$3#$b#Fine, it's a little funny.$5",
+        "AcceptGift_(O){{ModId}}_FarmhandSnackPack": "The Farmhand Snack Pack! I came up with that one. Someone else making it is the highest compliment, honestly.$1",
+        "AcceptBirthdayGift_Positive": "A birthday gift I'll actually use? You're too good to me, @. Thank you.$1",
+        "AcceptBirthdayGift_Neutral": "Oh, a birthday gift. Thanks, @. That's thoughtful.$0",
+        "AcceptBirthdayGift_Negative": "Hmm. Well, it's the thought that counts. I think.$2",
+        "Mon10": "You're one of the best things about this valley, @. I mean it. Don't let it go to your head.$1",
+        "Fri10": "Closing time's a lot nicer when I know a friend might stop by before I lock up. Thanks for that.$1"
+      }
+    },
+    {
+      "LogName": "Bentley gift tastes",
+      "Action": "EditData",
+      "Target": "Data/NPCGiftTastes",
+      "Entries": {
+        "{{ModId}}_Bentley": "Oh wow, that looks delicious! You really know my taste, @.$1/{{ModId}}_Cheeseburger {{ModId}}_FrenchFries {{ModId}}_ChickenNuggets {{ModId}}_Milkshake {{ModId}}_IceCreamSundae {{ModId}}_SoftServeCone {{ModId}}_FudgeBrownie {{ModId}}_StrawberryCheesecake {{ModId}}_GlazedDonut {{ModId}}_BananaSplit 206 210 241 220 395/I really like this, @. Thanks a lot.$1/{{ModId}}_Coke {{ModId}}_FarmhandSnackPack 240 195 194 211 196 224 216 223 233 424 256 167/Hmm. Not really my thing, but thanks for thinking of me.$2/153 157 330 390 382 767/Ugh. Please take this out of my restaurant.$3/{{ModId}}_Windex 684 766 -20/Oh, a gift. Thanks, @. That's thoughtful.$0/"
+      }
+    },
+    {
+      "LogName": "Bentley restaurant events (empty base)",
+      "Action": "Load",
+      "Target": "Data/Events/{{ModId}}_BentleysRestaurant",
+      "FromFile": "assets/data/empty.json"
+    },
+    {
+      "LogName": "Bentley 4-heart event: teaches the Milkshake recipe",
+      "Action": "EditData",
+      "Target": "Data/Events/{{ModId}}_BentleysRestaurant",
+      "Entries": {
+        "{{ModId}}_BentleyMilkshakeLesson/f {{ModId}}_Bentley 1000/t 900 2000": "none/16 7/farmer 16 6 0 {{ModId}}_Bentley 16 4 2/skippable/pause 600/speak {{ModId}}_Bentley \"Hey, @. You've been around a lot lately, and I think it's time I showed you something.$1\"/pause 300/speak {{ModId}}_Bentley \"Not many people get to see this. Milk, sugar, a handful of fresh strawberries, and a lot of patience.$0\"/pause 900/emote {{ModId}}_Bentley 20/speak {{ModId}}_Bentley \"And that's it. One Milkshake. Easy, right?$1\"/action MarkCookingRecipeKnown Current {{ModId}}_Milkshake/message \"Bentley taught you how to cook a Milkshake!\"/speak {{ModId}}_Bentley \"The recipe's all yours now. Try not to tell the other restaurants.$5\"/pause 500/end"
+      }
+    }
+  ]
+}

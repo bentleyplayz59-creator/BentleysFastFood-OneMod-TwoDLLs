@@ -1,0 +1,51 @@
+{
+  "Changes": [
+    {
+      "LogName": "Arcade corner: Journey of the Prairie King (left, tiles 27,3-4) and Junimo Kart (right, tiles 29,3-4) use the game's own vanilla Action names; the game itself runs the minigames and keeps the progress and scores",
+      "Action": "EditMap",
+      "Target": "Maps/{{ModId}}_FastFoodInterior",
+      "MapTiles": [
+        {
+          "Position": {
+            "X": 27,
+            "Y": 3
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Action": "Arcade_Prairie"
+          }
+        },
+        {
+          "Position": {
+            "X": 27,
+            "Y": 4
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Action": "Arcade_Prairie"
+          }
+        },
+        {
+          "Position": {
+            "X": 29,
+            "Y": 3
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Action": "Arcade_Minecart"
+          }
+        },
+        {
+          "Position": {
+            "X": 29,
+            "Y": 4
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Action": "Arcade_Minecart"
+          }
+        }
+      ]
+    }
+  ]
+}

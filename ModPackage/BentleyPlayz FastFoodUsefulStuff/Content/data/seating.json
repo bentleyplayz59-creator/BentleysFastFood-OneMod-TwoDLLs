@@ -1,0 +1,17 @@
+{
+  "Changes": [
+    {
+      "LogName": "Restaurant interior seating: chairs and booths can be sat on (vanilla Data/ChairTiles, no DLL needed). Key = tilesheet/x/y of the tile in the tilesheet; value = width/height/direction/type/drawX/drawY/seasonal. 3.13.3: the two pink Dessert Corner chairs (tiles 19 and 20 of z_DessertCorner, the left chair faces right, the right chair faces left) are sittable too",
+      "Action": "EditData",
+      "Target": "Data/ChairTiles",
+      "Entries": {
+        "z_BentleyFastFoodInterior_v2/14/13": "1/1/right/chair/-1/-1/false",
+        "z_BentleyFastFoodInterior_v2/1/14": "1/1/left/chair/-1/-1/false",
+        "z_BentleyFastFoodInterior_v2/11/13": "1/1/left/chair/-1/-1/false",
+        "z_BentleyFastFoodInterior_v2/4/14": "1/1/left/chair/-1/-1/false",
+        "z_DessertCorner/3/2": "1/1/right/chair/-1/-1/false",
+        "z_DessertCorner/4/2": "1/1/left/chair/-1/-1/false"
+      }
+    }
+  ]
+}

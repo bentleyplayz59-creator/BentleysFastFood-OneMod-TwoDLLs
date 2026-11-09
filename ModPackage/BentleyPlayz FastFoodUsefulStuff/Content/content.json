@@ -1,0 +1,365 @@
+{
+  "Format": "2.6.0",
+  "Changes": [
+    {
+      "LogName": "Load Cheeseburger texture",
+      "Action": "Load",
+      "Target": "Mods/{{ModId}}/Burger",
+      "FromFile": "assets/burger.png"
+    },
+    {
+      "LogName": "Load French Fries texture",
+      "Action": "Load",
+      "Target": "Mods/{{ModId}}/Fries",
+      "FromFile": "assets/fries.png"
+    },
+    {
+      "LogName": "Load Coke texture",
+      "Action": "Load",
+      "Target": "Mods/{{ModId}}/Coke",
+      "FromFile": "assets/coke.png"
+    },
+    {
+      "LogName": "Load Windex texture",
+      "Action": "Load",
+      "Target": "Mods/{{ModId}}/Windex",
+      "FromFile": "assets/windex.png"
+    },
+    {
+      "LogName": "Load Farmhand Snack Pack texture",
+      "Action": "Load",
+      "Target": "Mods/{{ModId}}/SnackPack",
+      "FromFile": "assets/snack_pack.png"
+    },
+    {
+      "LogName": "Load Chicken Nuggets texture",
+      "Action": "Load",
+      "Target": "Mods/{{ModId}}/Nuggets",
+      "FromFile": "assets/nuggets.png"
+    },
+    {
+      "LogName": "Load Milkshake texture",
+      "Action": "Load",
+      "Target": "Mods/{{ModId}}/Milkshake",
+      "FromFile": "assets/milkshake.png"
+    },
+    {
+      "LogName": "Add Bentley Playz items",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_Cheeseburger": {
+          "Name": "{{ModId}}_Cheeseburger",
+          "DisplayName": "Cheeseburger",
+          "Description": "A juicy cheeseburger with melted cheese, a toasted bun, and fresh lettuce. A filling meal for a hard-working farmer.",
+          "Type": "Cooking",
+          "Category": -7,
+          "Price": 90,
+          "Texture": "Mods/{{ModId}}/Burger",
+          "SpriteIndex": 0,
+          "Edibility": 45,
+          "IsDrink": false
+        },
+        "{{ModId}}_FrenchFries": {
+          "Name": "{{ModId}}_FrenchFries",
+          "DisplayName": "French Fries",
+          "Description": "A carton of crispy golden fries. Salty, satisfying, and perfect for a quick break.",
+          "Type": "Cooking",
+          "Category": -7,
+          "Price": 45,
+          "Texture": "Mods/{{ModId}}/Fries",
+          "SpriteIndex": 0,
+          "Edibility": 18,
+          "IsDrink": false
+        },
+        "{{ModId}}_Coke": {
+          "Name": "{{ModId}}_Coke",
+          "DisplayName": "Coke",
+          "Description": "An ice-cold fizzy cola. A refreshing drink for a busy day.",
+          "Type": "Cooking",
+          "Category": -7,
+          "Price": 50,
+          "Texture": "Mods/{{ModId}}/Coke",
+          "SpriteIndex": 0,
+          "Edibility": 15,
+          "IsDrink": true,
+          "Buffs": [
+            {
+              "Id": "{{ModId}}_FizzyRush",
+              "Duration": 240,
+              "IsDebuff": false,
+              "CustomAttributes": {
+                "Speed": 1
+              }
+            }
+          ]
+        },
+        "{{ModId}}_Windex": {
+          "Name": "{{ModId}}_Windex",
+          "DisplayName": "Windex",
+          "Description": "A suspiciously blue bottle of window cleaner. Whoever put this in the farmer's inventory has some explaining to do.",
+          "Type": "Cooking",
+          "Category": -7,
+          "Price": 12,
+          "Texture": "Mods/{{ModId}}/Windex",
+          "SpriteIndex": 0,
+          "Edibility": 0,
+          "IsDrink": true,
+          "Buffs": [
+            {
+              "Id": "{{ModId}}_WindexDizzy",
+              "Duration": 120,
+              "IsDebuff": true,
+              "CustomAttributes": {
+                "Speed": -1,
+                "LuckLevel": -1
+              }
+            }
+          ]
+        },
+        "{{ModId}}_FarmhandSnackPack": {
+          "Name": "{{ModId}}_FarmhandSnackPack",
+          "DisplayName": "Farmhand Snack Pack",
+          "Description": "A handy bundle of trail snacks prepared for farmers who spend long days working in the fields or exploring the mines.",
+          "Type": "Cooking",
+          "Category": -7,
+          "Price": 110,
+          "Texture": "Mods/{{ModId}}/SnackPack",
+          "SpriteIndex": 0,
+          "Edibility": 32,
+          "IsDrink": false,
+          "Buffs": [
+            {
+              "Id": "{{ModId}}_TrailEnergy",
+              "Duration": 360,
+              "IsDebuff": false,
+              "CustomAttributes": {
+                "FarmingLevel": 1,
+                "MiningLevel": 1
+              }
+            }
+          ]
+        },
+        "{{ModId}}_ChickenNuggets": {
+          "Name": "{{ModId}}_ChickenNuggets",
+          "DisplayName": "Chicken Nuggets",
+          "Description": "Crispy golden chicken nuggets, fresh from Bentley's kitchen. Only sold at Bentley's Fast Food.",
+          "Type": "Cooking",
+          "Category": -7,
+          "Price": 70,
+          "Texture": "Mods/{{ModId}}/Nuggets",
+          "SpriteIndex": 0,
+          "Edibility": 25,
+          "IsDrink": false
+        },
+        "{{ModId}}_Milkshake": {
+          "Name": "{{ModId}}_Milkshake",
+          "DisplayName": "Milkshake",
+          "Description": "A thick, creamy strawberry milkshake with whipped cream and a cherry. Bentley taught you the recipe himself.",
+          "Type": "Cooking",
+          "Category": -7,
+          "Price": 90,
+          "Texture": "Mods/{{ModId}}/Milkshake",
+          "SpriteIndex": 0,
+          "Edibility": 35,
+          "IsDrink": true,
+          "Buffs": [
+            {
+              "Id": "{{ModId}}_SugarRush",
+              "Duration": 300,
+              "IsDebuff": false,
+              "CustomAttributes": {
+                "Defense": 1,
+                "Speed": 1
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "Add Bentley Playz crafting recipes",
+      "Action": "EditData",
+      "Target": "Data/CraftingRecipes",
+      "Entries": {
+        "{{ModId}}_Cheeseburger": "246 1 424 1 404 1 -75 1/Home/{{ModId}}_Cheeseburger/false/default/Cheeseburger",
+        "{{ModId}}_FrenchFries": "192 2 247 1/Home/{{ModId}}_FrenchFries/false/default/French Fries",
+        "{{ModId}}_Coke": "245 1 382 1/Home/{{ModId}}_Coke/false/default/Coke",
+        "{{ModId}}_Windex": "80 1 84 1/Home/{{ModId}}_Windex/false/default/Windex",
+        "{{ModId}}_FarmhandSnackPack": "-79 1 246 1 771 5/Home/{{ModId}}_FarmhandSnackPack/false/default/Farmhand Snack Pack"
+      }
+    },
+    {
+      "LogName": "Add Milkshake cooking recipe (learned from Bentley at 4 hearts only)",
+      "Action": "EditData",
+      "Target": "Data/CookingRecipes",
+      "Entries": {
+        "{{ModId}}_Milkshake": "184 1 245 1 400 1/10 10/{{ModId}}_Milkshake/null/Milkshake"
+      }
+    },
+    {
+      "LogName": "Teach recipes to existing saves",
+      "Action": "EditData",
+      "Target": "Data/TriggerActions",
+      "Entries": {
+        "{{ModId}}_LearnRecipes": {
+          "Id": "{{ModId}}_LearnRecipes",
+          "Trigger": "DayStarted",
+          "Actions": [
+            "MarkCraftingRecipeKnown Current {{ModId}}_Cheeseburger",
+            "MarkCraftingRecipeKnown Current {{ModId}}_FrenchFries",
+            "MarkCraftingRecipeKnown Current {{ModId}}_Coke",
+            "MarkCraftingRecipeKnown Current {{ModId}}_Windex",
+            "MarkCraftingRecipeKnown Current {{ModId}}_FarmhandSnackPack"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "Sell Bentley Playz items at Gus's Saloon",
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": [
+        "Saloon",
+        "Items"
+      ],
+      "Entries": {
+        "{{ModId}}_Cheeseburger": {
+          "Id": "{{ModId}}_Cheeseburger",
+          "ItemId": "(O){{ModId}}_Cheeseburger",
+          "Price": 180,
+          "IgnoreShopPriceModifiers": true,
+          "AvailableStock": 10,
+          "AvailableStockLimit": "Player"
+        },
+        "{{ModId}}_FrenchFries": {
+          "Id": "{{ModId}}_FrenchFries",
+          "ItemId": "(O){{ModId}}_FrenchFries",
+          "Price": 90,
+          "IgnoreShopPriceModifiers": true,
+          "AvailableStock": 15,
+          "AvailableStockLimit": "Player"
+        },
+        "{{ModId}}_Coke": {
+          "Id": "{{ModId}}_Coke",
+          "ItemId": "(O){{ModId}}_Coke",
+          "Price": 100,
+          "IgnoreShopPriceModifiers": true,
+          "AvailableStock": 15,
+          "AvailableStockLimit": "Player"
+        },
+        "{{ModId}}_Windex": {
+          "Id": "{{ModId}}_Windex",
+          "ItemId": "(O){{ModId}}_Windex",
+          "Price": 25,
+          "IgnoreShopPriceModifiers": true,
+          "AvailableStock": 5,
+          "AvailableStockLimit": "Player"
+        },
+        "{{ModId}}_FarmhandSnackPack": {
+          "Id": "{{ModId}}_FarmhandSnackPack",
+          "ItemId": "(O){{ModId}}_FarmhandSnackPack",
+          "Price": 220,
+          "IgnoreShopPriceModifiers": true,
+          "AvailableStock": 10,
+          "AvailableStockLimit": "Player"
+        }
+      }
+    },
+    {
+      "LogName": "Include Bentley's Fast Food location (restaurant interior as a global location)",
+      "Action": "Include",
+      "FromFile": "data/locations.json"
+    },
+    {
+      "LogName": "Place Bentley's Fast Food at the Bus Stop (was Cindersap Forest)",
+      "Action": "Include",
+      "FromFile": "data/busstop_restaurant.json"
+    },
+    {
+      "LogName": "Include Bentley's Fast Food shop and counter (Part 2 Final)",
+      "Action": "Include",
+      "FromFile": "data/shop.json"
+    },
+    {
+      "LogName": "Include restaurant seating (sit on chairs and booths)",
+      "Action": "Include",
+      "FromFile": "data/seating.json"
+    },
+    {
+      "LogName": "Include Bentley NPC (Part 3)",
+      "Action": "Include",
+      "FromFile": "data/bentley.json"
+    },
+    {
+      "LogName": "Include Restaurant Robot NPC (non-giftable robot)",
+      "Action": "Include",
+      "FromFile": "data/restaurant_robot.json"
+    },
+    {
+      "LogName": "Include arcade corner (Journey of the Prairie King and Junimo Kart, vanilla minigames)",
+      "Action": "Include",
+      "FromFile": "data/arcade.json"
+    },
+    {
+      "LogName": "Include dessert corner (left room: dessert kiosk and 7 desserts)",
+      "Action": "Include",
+      "FromFile": "data/dessert_corner.json"
+    },
+    {
+      "LogName": "Include optional festival entries (Part 3)",
+      "Action": "Include",
+      "FromFile": "data/festivals.json"
+    },
+    {
+      "LogName": "Town Pass removed (restaurant is open 24/7): take any leftover Town Pass book out of existing saves, once",
+      "Action": "EditData",
+      "Target": "Data/TriggerActions",
+      "Entries": {
+        "{{ModId}}_RemoveLeftoverTownPass": {
+          "Id": "{{ModId}}_RemoveLeftoverTownPass",
+          "Trigger": "DayStarted",
+          "Actions": [
+            "RemoveItem (O){{ModId}}_TownPass 999"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "Welcome letter from Bentley",
+      "Action": "EditData",
+      "Target": "Data/Mail",
+      "Entries": {
+        "{{ModId}}_WelcomeLetter": "Dear @,^Welcome to Pelican Town! My name is Bentley, and I am the owner of Bentley's Fast Food, located in the Bus Stop, just east of the bus.^We are open 24 hours a day, every day, and we serve hot, freshly prepared meals made for hardworking farmers.^Please stop by our shop when you have a moment. We would be delighted to welcome you.^^Sincerely,^   -Bentley^Owner, Bentley's Fast Food[#]Welcome to Pelican Town"
+      }
+    },
+    {
+      "LogName": "Send the welcome letter once, on the first day loaded",
+      "When": { "NewPlayerWelcome": "true" },
+      "Action": "EditData",
+      "Target": "Data/TriggerActions",
+      "Entries": {
+        "{{ModId}}_SendWelcomeLetter": {
+          "Id": "{{ModId}}_SendWelcomeLetter",
+          "Trigger": "DayStarted",
+          "Condition": "!PLAYER_HAS_MAIL Current {{ModId}}_WelcomeLetter Any",
+          "Actions": [
+            "AddMail Current {{ModId}}_WelcomeLetter Now"
+          ]
+        }
+      }
+    }
+  ],
+  "ConfigSchema": {
+    "NewPlayerWelcome": {
+      "AllowValues": "true, false",
+      "Default": "true",
+      "Description": "Everything that treats you as brand new: Bentley's welcome letter and his first-time introduction dialogue. Turn off to skip all of it."
+    },
+    "EnableFestivals": {
+      "AllowValues": "true, false",
+      "Default": "false",
+      "Description": "EXPERIMENTAL: add Bentley to vanilla festivals. Unverified in-game; off by default."
+    }
+  }
+}

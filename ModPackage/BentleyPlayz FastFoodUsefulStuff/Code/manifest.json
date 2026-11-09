@@ -1,0 +1,9 @@
+{
+  "Name": "Bentley's Fast Food (code part)",
+  "Author": "Bentley Playz",
+  "Version": "3.13.6",
+  "Description": "Code part of Bentley Playz Fast Food & Useful Stuff: door locking, Windex drinking damage and the update announcement. Ships inside the same mod folder as the Content part.",
+  "UniqueID": "BentleyPlayz.FastFoodUsefulStuff.Smapi",
+  "EntryDll": "BentleyPlayz.FastFoodUsefulStuff.Smapi.dll",
+  "MinimumApiVersion": "4.1.10"
+}

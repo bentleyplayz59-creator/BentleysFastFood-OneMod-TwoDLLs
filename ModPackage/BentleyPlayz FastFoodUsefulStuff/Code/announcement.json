@@ -1,0 +1,181 @@
+{
+  "_help": "EDIT THIS FILE to change the update announcement - no recompiling needed. The announcement shows once per save, and again every time the mod's version number changes (the Version in manifest.json). Type is 'heading' or 'text'. {farmerName} is replaced by the player's name. Use plain ASCII punctuation only (no long dashes or curly quotes); Stardew's fonts do not all have them.",
+  "Blocks": [
+    {
+      "Type": "heading",
+      "Text": "Bentley Playz - Restaurant Update!"
+    },
+    {
+      "Type": "heading",
+      "Text": "Welcome, {farmerName}!"
+    },
+    {
+      "Type": "text",
+      "Text": "Thank you for downloading the latest version of Bentley's Fast Food!"
+    },
+    {
+      "Type": "heading",
+      "Text": "What's new in this version?"
+    },
+    {
+      "Type": "heading",
+      "Text": "Dessert Corner Makeover"
+    },
+    {
+      "Type": "text",
+      "Text": "The Dessert Corner has a new look: small pink cafe tables and chairs that match the dining room, and a big DESSERT sign."
+    },
+    {
+      "Type": "text",
+      "Text": "The dessert kiosk is now much easier to spot. Look for the striped awning and the ORDER HERE board, then stand on the pink mat in front of the counter and talk to it."
+    },
+    {
+      "Type": "text",
+      "Text": "The arcade sign has also moved up a little so it sits better on the wall."
+    },
+    {
+      "Type": "heading",
+      "Text": "Last Update: Dessert Corner"
+    },
+    {
+      "Type": "text",
+      "Text": "The room on the left side of the restaurant is now a dessert shop, the mirror image of the arcade. Walk through the doorway in the left-hand wall."
+    },
+    {
+      "Type": "text",
+      "Text": "Use the dessert kiosk to buy 7 desserts: Ice Cream Sundae, Soft Serve Cone, Fudge Brownie, Strawberry Cheesecake, Glazed Donut, Banana Split and the Windex Swirl Cone."
+    },
+    {
+      "Type": "text",
+      "Text": "Windex and the Windex Swirl Cone now really hurt (they take health and energy). Please do not drink real window cleaner!"
+    },
+    {
+      "Type": "heading",
+      "Text": "Earlier Update: Restaurant Improvements"
+    },
+    {
+      "Type": "text",
+      "Text": "The restaurant interior is slightly bigger. The original design, furniture and decorations are all still here."
+    },
+    {
+      "Type": "text",
+      "Text": "New arcade entertainment corner: walk through the doorway on the right-hand side of the dining room."
+    },
+    {
+      "Type": "heading",
+      "Text": "New Arcade Machines"
+    },
+    {
+      "Type": "text",
+      "Text": "Journey of the Prairie King is now available inside the restaurant."
+    },
+    {
+      "Type": "text",
+      "Text": "Junimo Kart is now available inside the restaurant."
+    },
+    {
+      "Type": "text",
+      "Text": "Both machines use the original Stardew Valley minigames."
+    },
+    {
+      "Type": "heading",
+      "Text": "Earlier Updates"
+    },
+    {
+      "Type": "heading",
+      "Text": "Settings File"
+    },
+    {
+      "Type": "text",
+      "Text": "The mod has a config.json, made the first time you launch the game. It is in the mod's Code folder. Open it in any text editor to change how much health Windex takes when you drink it (WindexDrinkDamage, set it to 0 for none). When you update, copy your old config.json into the new Code folder to keep your choice."
+    },
+    {
+      "Type": "heading",
+      "Text": "Windex Hurts"
+    },
+    {
+      "Type": "text",
+      "Text": "Drinking Windex takes 10 health by default. It never knocks you out, because your health stops at 1. Please do not drink real window cleaner!"
+    },
+    {
+      "Type": "heading",
+      "Text": "Update Notes Window"
+    },
+    {
+      "Type": "text",
+      "Text": "Every update shows its notes here once after you load your save, so you always know what changed."
+    },
+    {
+      "Type": "heading",
+      "Text": "Building Makeover"
+    },
+    {
+      "Type": "text",
+      "Text": "The restaurant's outside has been redrawn to match Stardew Valley's own buildings, with a new roof, walls, windows, door, awning and stone base. The hours poster by the door reads 24H / 7D."
+    },
+    {
+      "Type": "heading",
+      "Text": "Bentley's Bedroom"
+    },
+    {
+      "Type": "text",
+      "Text": "Behind the kitchen is Bentley's private room, with a bed, desk and game console. The staff door is open to everyone."
+    },
+    {
+      "Type": "heading",
+      "Text": "Seats to Sit On"
+    },
+    {
+      "Type": "text",
+      "Text": "Take a seat on the restaurant's chairs and booths! Right-click, tap or press the action button on a seat."
+    },
+    {
+      "Type": "heading",
+      "Text": "Meet the Restaurant Robot"
+    },
+    {
+      "Type": "text",
+      "Text": "A friendly robot, the Restaurant Robot, keeps watch inside the restaurant. He is a townsperson like the Governor: you can chat with him, but he cannot be given gifts and has no friendship hearts."
+    },
+    {
+      "Type": "heading",
+      "Text": "Open 24 Hours, Every Day"
+    },
+    {
+      "Type": "text",
+      "Text": "Day or night, the front door and the ordering counter never close. The Town Pass is gone because nobody needs it now, and any leftover pass is removed from your inventory."
+    },
+    {
+      "Type": "heading",
+      "Text": "Brighter Interior"
+    },
+    {
+      "Type": "text",
+      "Text": "Extra lights and slightly brighter shadows make the restaurant more comfortable, including the new arcade corner."
+    },
+    {
+      "Type": "heading",
+      "Text": "Special Thanks"
+    },
+    {
+      "Type": "text",
+      "Text": "We would also like to thank everyone in the Stardew Valley community who has downloaded the mod, shared feedback, and supported its continued development."
+    },
+    {
+      "Type": "text",
+      "Text": "We genuinely appreciate your support."
+    },
+    {
+      "Type": "text",
+      "Text": "Thank you for being part of Bentley's Fast Food!"
+    },
+    {
+      "Type": "heading",
+      "Text": "Enjoy the update!"
+    },
+    {
+      "Type": "text",
+      "Text": "Creator: Bentley Playz"
+    }
+  ]
+}
